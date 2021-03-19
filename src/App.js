@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from 'styled-components';
+import MainBar from './Components/MainBar';
 
-function App() {
+// pick a theme of your choice
+import original from "react95/dist/themes/original";
+import GlobalStyles from './GlobalStyles';
+import * as S from './AppStyles';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyles />
+      <ThemeProvider theme={ original }>
+        <S.AppWrapper>
+          <MainBar />
+        </S.AppWrapper>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
