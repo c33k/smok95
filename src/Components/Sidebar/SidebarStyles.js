@@ -5,5 +5,6 @@ export const Sidebar = styled.section`
   flex-direction: column;
   justify-content: space-between;
   flex: 0.3;
-  padding-top: 50px;
+  padding-top: 60px;
+  padding-left: 20px;
 `;
