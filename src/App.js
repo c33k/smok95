@@ -14,12 +14,10 @@ const App = () => {
       <GlobalStyles />
       <ThemeProvider theme={ original }>
         <S.AppWrapper>
-          <MainBar />
-
           <S.Content>
             <Sidebar />
           </S.Content>
-          
+          <MainBar />
           <SalaryCounter />          
         </S.AppWrapper>
       </ThemeProvider>
