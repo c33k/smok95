@@ -20,6 +20,7 @@ const App = () => {
   const [selectedItem, setSelectedItem] = useState(null);
   const onSelectMenuItem = (itemName) => setSelectedItem(itemName);
   const [selectedTheme, setSelectedTheme] = useState(original);
+  const [selectedBackground, setSelectedBackground] = useState(null);
 
   const onChangeTheme = (themeName) => {
     switch(themeName) {
@@ -50,16 +51,24 @@ const App = () => {
     }
   };
 
+  const onChangeBackground = (background) => setSelectedBackground(background);
+
+  const backgroundStyle = (!!selectedBackground && selectedBackground !== '<Custom>') ? {
+      backgroundImage: `url("./backgrounds/${selectedBackground}")`,
+      backgroundRepeat: 'repeat',
+  } : undefined;
+
   return (
     <>
       <GlobalStyles />
       <ThemeProvider theme={ selectedTheme }>
-        <S.AppWrapper>
+        <S.AppWrapper style={ backgroundStyle }>
           <S.Container>
             <Sidebar />
             <Content 
               openWindow={ selectedItem }
               changeTheme={ onChangeTheme }
+              changeBackground={ onChangeBackground }
             />
           </S.Container>
           <MainBar onClick={ onSelectMenuItem }/>

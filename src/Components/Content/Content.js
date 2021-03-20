@@ -3,11 +3,11 @@ import Settings95 from '../Settings95/Settings95';
 
 import * as S from './ContentStyles';
 
-const Content = ({ openWindow, changeTheme }) => {
+const Content = ({ openWindow, changeTheme, changeBackground }) => {
   return (
     <S.Content>
       { openWindow === 'settings' &&
-        <Settings95 changeTheme={ changeTheme }/>
+        <Settings95 changeTheme={ changeTheme } changeBackground={ changeBackground }/>
       }
     </S.Content>
   )

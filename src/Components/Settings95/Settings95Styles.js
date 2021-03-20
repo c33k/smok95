@@ -5,7 +5,6 @@ export const Settings = styled.div`
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 300px;
     justify-content: space-between;
     align-items: center;
   }
