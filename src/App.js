@@ -4,7 +4,7 @@ import Sidebar from './Components/Sidebar/Sidebar';
 import SalaryCounter from './Components/SalaryCounter/SalaryCounter';
 
 // pick a theme of your choice
-import original from "react95/dist/themes/original";
+import lilac from "react95/dist/themes/lilac";
 import GlobalStyles from './GlobalStyles';
 import * as S from './AppStyles';
 
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <ThemeProvider theme={ original }>
+      <ThemeProvider theme={ lilac }>
         <S.AppWrapper>
           <S.Content>
             <Sidebar />

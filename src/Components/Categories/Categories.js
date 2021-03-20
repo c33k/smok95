@@ -21,7 +21,7 @@ function Categories() {
 
   return (
     <S.Categories>
-      <Window style={{ width: 350 }}>
+      <Window className='WindowCategories'>
         <WindowHeader>categories.exe</WindowHeader>
         <WindowContent>
           <Table>
@@ -33,7 +33,7 @@ function Categories() {
             </TableHead>
             <TableBody style={{ overflow: 'scroll' }}>
               { state.categories.map(category => (
-                <TableRow>
+                <TableRow key={ category.id }>
                   <TableDataCell style={{ textAlign: 'center' }}>
                     <span role='img' aria-label='LEAF'>
                       { category.icon }
@@ -55,7 +55,7 @@ function Categories() {
         </WindowContent>
       </Window>
     </S.Categories>
-  )
+  );
 }
 
 export default Categories;
