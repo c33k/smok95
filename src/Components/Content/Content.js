@@ -6,9 +6,9 @@ import * as S from './ContentStyles';
 const Content = ({ openWindow, changeTheme }) => {
   return (
     <S.Content>
-      { openWindow === 'settings' && (
+      { openWindow === 'settings' &&
         <Settings95 changeTheme={ changeTheme }/>
-      ) }
+      }
     </S.Content>
   )
 };

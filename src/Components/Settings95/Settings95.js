@@ -26,18 +26,16 @@ const Settings95 = ({ changeTheme }) => {
     <S.Settings>
       <Window className='WindowCategories'>
         <WindowHeader>settings.exe</WindowHeader>
-        <WindowContent>          
-          <Desktop backgroundStyles={{ background: '#008080' }} />
+        <WindowContent className='WindowContent'>          
+          <Desktop className='Desktop' backgroundStyles={{ background: '#008080' }} />
           <Fieldset label='Theme'>            
-            
-          <Select
-            defaultValue={ 1 }
-            options={ OPTIONS }
-            menuMaxHeight={ 160 }
-            width={ 160 }
-            onChange={ onSelectTheme }
-          />
-            
+            <Select
+              className='Select'
+              defaultValue={ 1 }
+              options={ OPTIONS }
+              menuMaxHeight={ 160 }
+              onChange={ onSelectTheme }
+            />
           </Fieldset>
         </WindowContent>
       </Window>
