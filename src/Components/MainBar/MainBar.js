@@ -3,8 +3,12 @@ import { AppBar, Button, List, ListItem, Divider, Toolbar } from 'react95';
 
 import * as S from './MainBarStyles';
 
-const MainBar = () => {
+const MainBar = ({ onClick }) => {
   const [open, setOpen] = useState(false);
+  
+  const onClickSettings = () => {
+    onClick('settings');
+  };
 
   return (
     <AppBar>
@@ -37,11 +41,11 @@ const MainBar = () => {
                 </span>
                 Profile
               </ListItem>
-              <ListItem>
+              <ListItem onClick={ onClickSettings }>
                 <span role='img' aria-label='📁'>
-                  📁
+                  ⚙
                 </span>
-                Categories
+                Settings
               </ListItem>
               {/* <ListItem>
                 <span role='img' aria-label='📁'>
