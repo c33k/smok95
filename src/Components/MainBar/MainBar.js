@@ -41,8 +41,14 @@ const MainBar = () => {
                 <span role='img' aria-label='📁'>
                   📁
                 </span>
-                My account
+                Categories
               </ListItem>
+              {/* <ListItem>
+                <span role='img' aria-label='📁'>
+                  🏢
+                </span>
+                Categories
+              </ListItem> */}
               <Divider />
               <ListItem>
                 <span role='img' aria-label='🔙'>
