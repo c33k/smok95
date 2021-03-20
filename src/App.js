@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import MainBar from './Components/MainBar/MainBar';
+import Sidebar from './Components/Sidebar/Sidebar';
 import SalaryCounter from './Components/SalaryCounter/SalaryCounter';
 
 // pick a theme of your choice
@@ -14,7 +15,12 @@ const App = () => {
       <ThemeProvider theme={ original }>
         <S.AppWrapper>
           <MainBar />
-          <SalaryCounter />
+
+          <S.Content>
+            <Sidebar />
+          </S.Content>
+          
+          <SalaryCounter />          
         </S.AppWrapper>
       </ThemeProvider>
     </>
