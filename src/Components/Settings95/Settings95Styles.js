@@ -9,6 +9,12 @@ export const Settings = styled.div`
     align-items: center;
   }
 
+  .WindowHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .Desktop {
     flex: 0.8;
   }

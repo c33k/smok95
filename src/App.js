@@ -53,6 +53,8 @@ const App = () => {
 
   const onChangeBackground = (background) => setSelectedBackground(background);
 
+  const onClose = () => setSelectedItem(null);
+
   const backgroundStyle = (!!selectedBackground && selectedBackground !== '<Custom>') ? {
       backgroundImage: `url("./backgrounds/${selectedBackground}")`,
       backgroundRepeat: 'repeat',
@@ -69,6 +71,7 @@ const App = () => {
               openWindow={ selectedItem }
               changeTheme={ onChangeTheme }
               changeBackground={ onChangeBackground }
+              onClose={ onClose }
             />
           </S.Container>
           <MainBar onClick={ onSelectMenuItem }/>

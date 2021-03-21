@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {
+  Button,
   Desktop,
   Fieldset,
   Select,
@@ -29,11 +30,9 @@ const BACKGROUND_OPTIONS = [
   { value: 4, label: 'sky.gif' },
 ];
 
-const Settings95 = ({ onChangeTheme, onChangeBackground }) => {
+const Settings95 = ({ onChangeTheme, onChangeBackground, onClose }) => {
   const [selectedBackground, setSelectedBackground] = useState(null);
-
   const onSelectTheme = (evt, nextSelection) => onChangeTheme(nextSelection.label);
-
   const onSelectBackground = (evt, nextSelection) => {
     onChangeBackground(nextSelection.label);
     setSelectedBackground(nextSelection.label);
@@ -47,7 +46,10 @@ const Settings95 = ({ onChangeTheme, onChangeBackground }) => {
   return (
     <S.Settings>
       <Window className='WindowCategories'>
-        <WindowHeader>settings.exe</WindowHeader>
+        <WindowHeader className='WindowHeader'>
+          <span>settings.exe</span>
+          <Button square onClick={ onClose }>X</Button>
+        </WindowHeader>
         <WindowContent className='WindowContent'>          
           <Desktop className='Desktop' backgroundStyles={ backgroundStyles } />
           <Fieldset label='Theme'>            

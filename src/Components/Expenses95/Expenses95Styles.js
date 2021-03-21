@@ -4,6 +4,12 @@ export const Expenses = styled.section`
   display: flex;
   flex: 1;
 
+  .WindowsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   .WindowContent thead > tr {
     display: block;
   }

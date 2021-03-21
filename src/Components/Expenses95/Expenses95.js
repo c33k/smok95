@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
-import { 
+import {
+  Button,
   Panel,
   Window, 
   WindowContent, 
@@ -15,7 +16,7 @@ import {
 
 import * as S from './Expenses95Styles';
 
-const Expenses95 = () => {
+const Expenses95 = ({ onClose }) => {
   const [expenses, setExpenses] = useState([]);
   useEffect(() => {
     const data = require('./data').default;
@@ -35,7 +36,10 @@ const Expenses95 = () => {
   return (
     <S.Expenses>
       <Window className='WindowExpenses'>
-        <WindowHeader>expenses.exe</WindowHeader>
+        <WindowHeader className='WindowsHeader'>
+          <span>expenses.exe</span>
+          <Button square onClick={ onClose }>X</Button>
+        </WindowHeader>
         <WindowContent className='WindowContent'>
           <Table>
             <TableHead>
