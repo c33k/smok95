@@ -1,44 +1,42 @@
-import { v4 as uuidv4 } from 'uuid';
-
 const data = {
   categories: [
     {
-      id: uuidv4(),
+      id: 1,
       icon: '🍽',
       name: 'Food',
     },
     {
-      id: uuidv4(),
+      id: 2,
       icon: '🏠',
       name: 'Household',
     },
     {
-      id: uuidv4(),
+      id: 3,
       icon: '🚋',
       name: 'Transport',
     },
     {
-      id: uuidv4(),
+      id: 4,
       icon: '🚴‍♂️',
       name: 'Health',
     },
     {
-      id: uuidv4(),
+      id: 5,
       icon: '🌍',
       name: 'Travel',
     },
     {
-      id: uuidv4(),
+      id: 6,
       icon: '💰',
       name: 'Charity',
     },
     {
-      id: uuidv4(),
+      id: 7,
       icon: '🎁',
       name: 'Gifts',
     },
     {
-      id: uuidv4(),
+      id: 8,
       icon: '👚',
       name: 'Clothes',
     },

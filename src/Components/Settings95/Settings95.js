@@ -29,13 +29,13 @@ const BACKGROUND_OPTIONS = [
   { value: 4, label: 'sky.gif' },
 ];
 
-const Settings95 = ({ changeTheme, changeBackground }) => {
+const Settings95 = ({ onChangeTheme, onChangeBackground }) => {
   const [selectedBackground, setSelectedBackground] = useState(null);
 
-  const onSelectTheme = (evt, nextSelection) => changeTheme(nextSelection.label);
+  const onSelectTheme = (evt, nextSelection) => onChangeTheme(nextSelection.label);
 
   const onSelectBackground = (evt, nextSelection) => {
-    changeBackground(nextSelection.label);
+    onChangeBackground(nextSelection.label);
     setSelectedBackground(nextSelection.label);
   };
 

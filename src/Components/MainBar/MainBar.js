@@ -5,10 +5,7 @@ import * as S from './MainBarStyles';
 
 const MainBar = ({ onClick }) => {
   const [open, setOpen] = useState(false);
-  
-  const onClickSettings = () => {
-    onClick('settings');
-  };
+  const onClickMenuItem = (option) => onClick(option);
 
   return (
     <AppBar>
@@ -41,18 +38,18 @@ const MainBar = ({ onClick }) => {
                 </span>
                 Profile
               </ListItem>
-              <ListItem onClick={ onClickSettings }>
+              <ListItem onClick={ () => onClickMenuItem('expenses') }>
+                <span role='img' aria-label='📁'>
+                  🏢
+                </span>
+                Expenses
+              </ListItem>
+              <ListItem onClick={ () => onClickMenuItem('settings') }>
                 <span role='img' aria-label='📁'>
                   ⚙
                 </span>
                 Settings
               </ListItem>
-              {/* <ListItem>
-                <span role='img' aria-label='📁'>
-                  🏢
-                </span>
-                Categories
-              </ListItem> */}
               <Divider />
               <ListItem>
                 <span role='img' aria-label='🔙'>
