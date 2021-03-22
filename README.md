@@ -18,9 +18,9 @@ desktop application with an SQLite database.
 
 ## Next Steps
 
-[] - Refactoring of Calendar95 to use the calendar from React95 calendar. 
-[] - Add Context + Reduce: at the moment, the components were added just to test the layout structure. 
-[] - Create database: add basic tables and connect components to use it.
+- [ ] Refactoring of Calendar95 to use the calendar from React95 calendar. 
+- [ ] Add Context + Reduce: at the moment, the components were added just to test the layout structure. 
+- [ ] Create database: add basic tables and connect components to use it.
 
 ## How To Run?
 In the project directory, you can run:
